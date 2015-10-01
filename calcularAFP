@@ -1,0 +1,31 @@
+// calcularAFP.cpp : Defines the entry point for the console application.
+//Autor: Maria Fernanda Osinaga Villarroel
+//Fecha: 1/10/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+{
+	float sueldo,afp,s;
+	int N, i;
+	cout<<"Ingrese el numero de empleados: ";
+	cin>>N;
+	s=0;
+	for (i=0; i<N; i++)
+	{
+		cout<<"Ingrese el sueldo: ";
+		cin>>sueldo;
+		if (sueldo>=2*1656)
+			afp=sueldo*0.121;
+		else
+			afp=sueldo*0.03;
+		cout<<"AFP a pagar del empleado es: "<<afp<<endl;
+		s=s+afp;
+	}
+	cout<<"El impuesto total a pagar es: "<<s<<endl;
+	getch();
+}
